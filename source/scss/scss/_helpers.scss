@@ -1,0 +1,77 @@
+/*! 
+  * Helpers v0.10
+  * Copyright 2022 © Framboide
+  * Developed by Framber Ereu (github.com/framboide)
+  * License GNU
+*/
+@for $i from 0 to 11{
+	.m#{$i * 4}{
+		margin: $i * 4px
+	}
+
+	.mr-#{$i * 4}{
+		margin-right: $i * 4px
+	}
+
+	.ml-#{$i * 4}{
+		margin-left: $i * 4px
+	}
+
+	.mt-#{$i * 4}{
+		margin-top: $i * 4px
+	}
+
+	.mb-#{$i * 4}{
+		margin-bottom: $i * 4px
+	}
+
+	.mx-#{$i * 4}{
+		margin-right: $i * 4px;
+		margin-left: $i * 4px
+	}
+
+	.my-#{$i * 4}{
+		margin-top: $i * 4px;
+		margin-bottom: $i * 4px	
+	}
+}
+
+/*padding*/
+@for $i from 0 to 11{
+	.p#{$i * 4}{
+		padding: $i * 4px
+	}
+	.pr-#{$i * 4}{
+		padding-right: $i * 4px
+	}
+	.pl-#{$i * 4}{
+		padding-left: $i * 4px
+	}
+	.pt-#{$i * 4}{
+		padding-top: $i * 4px
+	}
+	.pb-#{$i * 4}{
+		padding-bottom: $i * 4px
+	}
+	.px-#{$i * 4}{
+		padding-right: $i * 4px;
+		padding-left: $i * 4px
+	}
+	.py-#{$i * 4}{
+		padding-top: $i * 4px;
+		padding-bottom: $i * 4px
+	}
+}
+/*Width*/
+@for $i from 0 to 11{
+	.w-#{$i * 20}{
+		width: $i * 20%;
+	}
+}
+
+/*Heigth*/
+@for $i from 0 to 11{
+	.h-#{$i * 20}{
+		height: $i * 20%;
+	}
+}

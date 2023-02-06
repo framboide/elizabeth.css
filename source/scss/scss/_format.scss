@@ -1,0 +1,486 @@
+:root{
+  /*Tamaños*/
+  --xs: .25rem;
+  --sm: .5rem;
+  --md: 1rem;
+  --lg: 1.25rem;
+  --xlg: 1.5rem;
+  --xxl: 2rem;
+  --super: 2.5rem;
+
+  /*Propiedades*/
+  --none: none;
+  --hidden: hidden;
+  --auto: auto;
+  --cero: 0px;
+  --full: 100%;
+  --circle: 50%;
+
+  /*color*/
+  --bg: #fff;
+  --black: #18191e;
+  --dark: #0f0f13;
+  --light:#f1f4f8;
+  --slate:#64748b;
+  --gray:#6b7280;
+  --zinc:#71717a;
+  --neutral:#737373;
+  --stone:#78716c;
+  --red:#ef4444;
+  --orange:#f97316;
+  --amber:#f59e0b;
+  --yellow:#eab308;
+  --lime:#84cc16;
+  --green:#22c55e;
+  --emerald:#10b981;
+  --teal:#14b8a6;
+  --cyan:#06b6d4;
+  --sky:#0ea5e9;
+  --blue:#3b82f6;
+  --indigo:#6366f1;
+  --violent:#8b5cf6;
+  --purple:#a855f7;
+  --fuchsia:#d946ef;
+  --pink:#ec4899;
+  --rose:#f43f5e;
+
+  /*Fonts*/
+  --system-fonts:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --google-fonts: "Source Pro Sans", "Lato", "Roboto", "Open sans";
+
+  /*ui*/
+  --sh-xs: 0px 1px 2px rgba(0, 21, 64, .1), 0px 2px 1px rgba(0, 21, 64, .1);
+  --sh-sm: 0px 2px 4px rgba(0, 21, 64, .1), 0px 4px 2px rgba(0, 21, 64, .1);
+  --sh-md: 0px 4px 8px rgba(0, 21, 64, .1), 0px 8px 4px rgba(0, 21, 64, .1);
+  --sh-lg: 0px 8px 16px rgba(0, 21, 64, .1), 0px 16px 8px rgba(0, 21, 64, .1);
+  --sh-ui: 0px 2px 12px rgba(0, 21, 64, .1), 0px 4px 2px rgba(0, 21, 64, .1);
+}
+
+*{
+  margin: var(--cero)
+}
+
+*, *::before, *::after{
+  box-sizing: border-box
+}
+
+body{
+  font-size: var(--md);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+a{
+  color: var(--blue);
+  text-decoration: none
+}
+
+a:hover{
+    color: var(--blue)
+}
+
+small{
+  font-size: var(--md)
+}
+
+h1{
+  font-size: var(--xxl)
+}
+
+h2, h3, h4, h5, h6{
+  font-size: var(--xlg);
+  margin-bottom: var(--sm)
+}
+
+b, strong{
+  font-weight: bolder
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li{
+  display: inline-flex
+}
+
+.nav ul li::before{
+  content: " ";
+  margin-right: var(--lg)
+}
+
+.unli, .unli ul, .unli ul li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li a, .logo a{
+   text-decoration: none
+}
+
+table, code, pre{
+  overflow: auto
+}
+
+blockquote{
+  border-left: 3px solid var(--blue);
+  border-radius: 1px;
+  color: var(--black);
+  margin: 0;
+  margin-left: 12px;
+  padding: 16px;
+}
+button, form input{
+  border: var(--cero);
+  background-color: transparent;
+  outline: var(--none);
+}
+button:focus{
+    outline: var(--none)
+}
+
+audio, img, iframe, object, video{
+  max-width: var(--full);
+  width: var(--full);
+  display: block;
+  vertical-align: middle;
+  object-fit: cover;
+}
+// colors
+.bg{
+  background-color: var(--bg)
+}
+
+.cl, .cl a{
+  color: var(--bg)
+}
+
+.bg-black{
+  background-color: var(--black)
+}
+
+.cl-black, .cl-black a{
+  color: var(--black)
+}
+
+.bg-light{
+  background-color: var(--light)
+}
+
+.cl-light{
+  color: var(--light)       
+}
+
+.bg-dark{
+  background-color: var(--dark)
+}
+
+.cl-dark, .cl-dark a{
+  color: var(--dark)
+}
+
+.bg-slate{
+  background-color: var(--slate)
+}
+
+.cl-slate{
+  color: var(--slate)
+}
+
+.bg-gray{
+  background-color: var(--gray)
+}
+
+.cl-gray{
+  color: var(--gray)
+}
+
+.bg-zinc{
+  background-color: var(--zinc)
+}
+
+.cl-zinc{
+  color: var(--zinc)  
+}
+
+.bg-neutral{
+  background-color: var(--neutral)
+}
+
+.cl-neutral{
+  color: var(--neutral)
+}
+
+.bg-stone{
+  background-color: var(--stone)
+}
+
+.cl-stone{
+  color: var(--stone)
+}
+
+.bg-red{
+  background-color: var(--red)
+}
+
+.cl-red{
+  color: var(--red)
+}
+
+.bg-orange{
+  background-color: var(--orange)
+}
+
+.cl-orange{
+  color: var(--orange)
+}
+
+.bg-amber{
+  background-color: var(--amber)
+}
+
+.cl-amber{
+  color: var(--amber)
+}
+
+.bg-yellow{
+  background-color: var(--yellow) 
+}
+
+.cl-yellow{
+  color: var(--yellow)
+}
+
+.bg-lime{
+  background-color: var(--lime)
+}
+
+.cl-lime{
+  color: var(--lime)
+}
+
+.bg-green{
+  background-color: var(--green)
+}
+
+.cl-green{
+  color: var(--green)
+}
+
+.bg-emerald{
+  background-color: var(--emerald)
+}
+
+.cl-emerald{
+  color: var(--emerald)
+}
+
+.bg-teal{
+  background-color: var(--teal)
+}
+
+.cl-teal{
+  color: var(--teal)
+}
+
+.bg-cyan{
+  background-color: var(--cyan)
+}
+
+.cl-cyan{
+  color: var(--cyan)
+}
+
+.bg-sky{
+  background-color: var(--sky)
+}
+
+.cl-sky{
+  color: var(--sky)
+}
+
+.bg-blue{
+  background-color: var(--blue)
+}
+
+.cl-blue{
+  color: var(--blue)
+}
+
+.bg-indigo{
+  background-color: var(--indigo)
+}
+
+.cl-indigo{
+  color: var(--indigo)
+}
+
+.bg-violent{
+  background-color: var(--violent)
+}
+
+.cl-violent{
+  color: var(--violent)
+}
+
+.bg-purple{
+  background-color: var(--purple)
+}
+
+.cl-purple{
+  color: var(--purple)
+}
+
+.bg-fuchsia{
+  background-color: var(--fuchsia)
+}
+
+.cl-fuchsia{
+  color: var(--fuchsia)
+}
+
+.bg-pink{
+  background-color: var(--pink)
+}
+
+.cl-pink{
+  color: var(--pink)
+}
+
+.bg-rose{
+  background-color: var(--rose)
+}
+
+.cl-rose{
+  color: var(--rose)
+}
+
+// Fonts
+.fs-xs{
+  font-size: var(--xs)
+}
+
+.fs-sm{
+  font-size: var(--sm)
+}
+
+.fs-md{
+  font-size: var(--md)
+}
+
+.fs-lg{
+  font-size: var(--lg)
+}
+
+.fs-xlg{
+  font-size: var(--xlg)
+}
+
+.fs-xxl{
+  font-size: var(--xxl)
+}
+
+.fs-super{
+  font-size: var(--super)
+}
+
+.fw-100{
+  font-weight: 100
+}
+
+.fw-200{
+  font-weight: 200
+}
+
+.fw-300{
+  font-weight: 300
+}
+
+.fw-400{
+  font-weight: 400
+}
+
+.fw-500{
+  font-weight: 500
+}
+
+.fw-600{
+  font-weight: 600
+}
+
+.fw-700{
+  font-weight: 700
+}
+
+.fw-800{
+  font-weight: 800
+}
+
+.fw-900{
+  font-weight: 900}
+
+// i - svg
+.fill-dark{
+  fill: var(--dark)
+}
+
+.fill-bg{
+  fill: var(--bg)
+}
+
+.fill-none{
+  fill: var(--none);
+  stroke: currentColor
+}
+
+.i{
+  stroke-width: var(--i-stroke,2);
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.i-xs{
+  width: var(--xs)
+}
+
+.i-sm{
+  width: var(--sm)
+}
+
+.i-md{
+  width: var(--md)
+}
+
+.i-lg{
+  width: var(--lg)
+}
+
+.i-xlg{
+  width: var(--xlg)
+}
+
+.i-xxl{
+  width: var(--xxl)
+}
+
+.i-super{
+  width: var(--super)
+}
+
+.i-mega{
+  width: 3.5rem
+}
+
+.i-logo{
+  width: 8rem
+}

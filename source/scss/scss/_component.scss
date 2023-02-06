@@ -1,0 +1,128 @@
+/*! 
+  * Components v0.10
+  * Copyright 2022 © Framboide
+  * Developed by Framber Ereu (github.com/framboide)
+  * License GNU
+*/
+.button, .btn{
+	display: inline-block;
+	padding: .75rem .95rem;
+	font-weight: 400;
+	cursor: pointer;
+	white-space: nowrap;
+	font-size: 1.1rem;
+	margin-bottom: var(--sm);
+	transition: .3s all ease 0s;
+}
+
+.btn:hover{
+	text-decoration: none;
+	opacity: .85;
+	box-shadow: var(--sh-ui)
+}	
+
+.btn.is-circle{
+	border-radius: var(--circle);
+	box-shadow: var(--sh-sm);
+	padding: .76rem;
+	object-fit: cover;
+}
+
+.btn.is-circle i,
+.btn.is-circle span{
+	font-size: 1.15rem;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn.is-action:hover{
+	transform: translateX(4px);
+	box-shadow: var(--sh-sm);
+}
+
+.btn.is-360:hover > i{
+	transform: rotate(360deg);
+}
+/*table*/
+.table-ui{
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+}
+
+.table table {
+	min-width: 100%;
+	font-size: 1rem;
+}
+
+table {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	background-color: transparent;
+}
+
+.table thead th {
+	padding: 1.2rem;
+	border-top: 4px solid rgb(207, 216, 220);
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+.table tbody td, 
+.table thead th {
+	padding: 0.75rem 1.2rem;
+	border: 1px solid rgb(227, 227, 227);
+	font-weight: 500;text-align: left;
+}
+
+table tbody tr:hover{
+	background-color: var(--light);
+}	
+
+tbody td, thead th {
+	text-align: left;
+	padding: 0.5em;
+}
+
+thead th {
+	white-space: nowrap;
+}
+
+.table thead th.pro {
+	border-top: 3px solid var(--blue);
+}
+
+tbody tr:nth-child(2n+1) {
+	background: rgba(96, 125, 139, 0.05);
+}	
+// Formulario
+.form input[type="text"],
+.form input[type="email"], 
+.form textarea{
+	width: 100%;
+	display: block;
+	margin-bottom: var(--lg);
+	border:2px solid var(--light);
+	padding: var(--md);
+	border-radius: var(--sm);
+	box-shadow: var(--sh-sm)
+}
+
+.form label{
+	margin-bottom: var(--md);
+	font-size: var(--lg)
+}
+ 
+.form textarea{
+	margin-bottom: 2em;
+	max-width: 800px;
+	max-height: 420px;
+	height: 260px;
+}
+
+.form input:focus, .form input:focus{
+	outline: none;
+}

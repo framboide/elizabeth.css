@@ -1,0 +1,299 @@
+/*! 
+  * layouts v0.10
+  * Copyright 2022 © Framboide
+  * Developed by Framber Ereu (github.com/framboide)
+  * License GNU
+*/
+.block{
+	display: block
+}
+.none{
+	display: none
+}
+.grid{
+	display: grid
+}
+.sticky{
+	position: sticky;
+	top: 1rem;
+	display: block
+}
+.relative{
+	position: relative;
+}
+.absolute{
+	position: absolute;
+}
+
+.fixed{
+	position: fixed;
+}
+
+.t0{
+	top: 0;
+}
+
+.r0{
+	right: 0;
+}
+
+.l0{
+	left: 0;
+}
+
+.b0{
+	bottom: 0;
+}
+
+.t-left{
+	text-align: left;
+}
+
+.t-right{
+	text-align: right;
+}
+.t-center{
+	text-align: center
+}
+// Flexbox
+.flex{
+	display: flex
+}
+.wrap{
+	flex-wrap: wrap;
+}
+
+.wrap-reverse{
+	flex-wrap: wrap-reverse;
+}
+
+.row{
+	flex-direction: row;
+}
+
+.row-reverse{
+	flex-direction: row-reverse;
+}
+
+.column{
+	flex-direction: column;
+}
+
+.column-reverse{
+	flex-direction: column-reverse;
+}
+
+.item-center{
+	align-items: center;
+}
+
+.between{
+	justify-content: space-between;
+}
+
+@media (max-width: 576px){
+	.text-center-sm{
+        text-align: center;}
+
+    .text-left-sm{
+    	text-align: left;}
+
+    .text-right-sm{
+    	text-align: right;}
+    	
+	.flex-sm{
+		display: flex;}
+
+	.wrap-sm{
+		flex-wrap: wrap;}
+
+	.wrap-reverse-sm{
+		flex-wrap: wrap-reverse;}
+
+	.flex-row-sm{
+		flex-direction: row;}
+
+	.row-reverse-sm{
+		flex-direction: row-reverse;}
+
+	.column-sm{
+		flex-direction: column;}
+
+	.column-reverse-sm{
+		flex-direction: column-reverse;}
+
+	.item-center-sm{
+		align-items: center;}
+
+	.between-sm{
+		justify-content: space-between;
+	}
+}
+@media (min-width: 768px){
+	.text-center-md{
+        text-align: center;}
+
+    .text-left-md{
+    	text-align: left;}
+
+    .text-right-md{
+    	text-align: right;}
+
+	.flex-md{
+		display: flex;}
+
+	.wrap-md{
+		flex-wrap: wrap;}
+
+	.wrap-reverse-md{
+		flex-wrap: wrap-reverse;}
+
+	.flex-row-md{
+		flex-direction: row;}
+
+	.row-reverse-md{
+		flex-direction: row-reverse;}
+
+	.column-md{
+		flex-direction: column;}
+
+	.column-reverse-md{
+		flex-direction: column-reverse;}
+
+	.item-center-md{
+		align-items: center;}
+
+	.between-md{
+		justify-content: space-between;}
+}
+
+@media (min-width: 992px){
+	.t-center-lg{
+        text-align: center;}
+
+    .t-left-lg{
+    	text-align: left;}
+
+    .t-right-lg{
+    	text-align: right;}
+
+	.flex-lg{
+		display: flex;}
+
+	.wrap-lg{
+		flex-wrap: wrap;}
+
+	.wrap-reverse-lg{
+		flex-wrap: wrap-reverse;}
+
+	.flex-row-lg{
+		flex-direction: row;}
+
+	.row-reverse-lg{
+		flex-direction: row-reverse;}
+
+	.column-lg{
+		flex-direction: column;}
+
+	.column-reverse-lg{
+		flex-direction: column-reverse;}
+
+	.item-center-lg{
+		align-items: center;}
+
+	.between-lg{
+		justify-content: space-between;}
+}
+
+@media (min-width: 1200px){
+	.t-center-xlg{
+        text-align: center;}
+
+    .t-left-xlg{
+    	text-align: left;}
+
+    .t-right-xlg{
+    	text-align: right;}
+    	
+	.flex-xlg{
+		display: flex;}
+
+	.wrap-xlg{
+		flex-wrap: wrap;}
+
+	.wrap-reverse-lxg{
+		flex-wrap: wrap-reverse;}
+
+	.flex-row-xlg{
+		flex-direction: row;}
+
+	.row-reverse-xlg{
+		flex-direction: row-reverse;}
+
+	.column-xlg{
+		flex-direction: column;}
+
+	.column-reverse-xlg{
+		flex-direction: column-reverse;}
+
+	.item-center-xlg{
+		align-items: center;}
+
+	.between-xlg{
+		justify-content: space-between;}
+}
+
+// CSS Grid
+[class*="col-"] { 
+	display: grid;
+}
+
+@for $i from 1 to 6{
+  .gap-#{$i * 8}{
+    gap: $i * 8px;
+  }
+}
+// Defaults
+@for $i from 1 to 6{
+  .col-#{$i * 1}{
+     grid-template-columns: repeat($i, 1fr);
+   }
+}
+@for $i from 1 to 6{
+	.span-#{$i * 1}{
+      grid-column: span $i * 1
+    }
+}
+// Grande
+@media (max-width: 992px){
+  @for $i from 1 to 6{
+    .gra-col-#{$i * 1}{
+      grid-template-columns: repeat($i, 1fr)
+    }
+    .gra-span-#{$i * 1}{
+      grid-column: span $i * 1
+    }
+   }
+}
+// Mediano
+@media (max-width: 768px){
+  @for $i from 1 to 6{
+    .med-col-#{$i * 1}{
+      grid-template-columns: repeat($i, 1fr)
+    }
+    .med-span-#{$i * 1}{
+      grid-column: span $i * 1
+    }
+   }
+}
+// Pequeño
+@media (max-width: 576px){
+  @for $i from 1 to 6{
+    .peq-col-#{$i * 1}{
+      grid-template-columns: repeat($i, 1fr)
+    }
+    .peq-span-#{$i * 1}{
+      grid-column: span $i * 1
+      }
+   }
+}

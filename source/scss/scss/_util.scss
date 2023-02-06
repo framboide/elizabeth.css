@@ -1,0 +1,134 @@
+/*! 
+  * util v0.10
+  * Copyright 2022 © Framboide
+  * Developed by Framber Ereu (github.com/framboide)
+  * License GNU
+*/
+.rd-cero{
+  border: var(--cero)
+}
+
+.rd-sm{
+  border-radius: var(--sm)
+}
+
+.rd-md{
+  border-radius: var(--md)
+}
+
+.rd-lg{
+  border-radius: var(--lg)
+}
+
+.rd-circle img{
+  border-radius: var(--circle);
+  object-fit: cover
+}
+
+.sh-xs{
+  box-shadow: var(--sh-xs)
+}
+
+.sh-sm{
+  box-shadow: var(--sh-sm)
+}
+
+.sh-md{
+  box-shadow: var(--sh-md)
+}
+.sh-lg{
+  box-shadow: var(--sh-lg)
+}
+
+.sh-ui{
+  box-shadow: var(--sh-ui)
+}
+
+.s-xs{
+  width: 64px;
+  height: 64px;
+}
+
+.s-sm{
+  width: 160px;
+  height: 160px
+}
+
+.s-md{
+  width: 240px;
+  height: 240px
+}
+
+.s-lg{
+  width: 420px;
+  height: 420px
+}
+
+.order-0{
+  order: 0
+}
+
+.order-1{
+  order: 1
+}
+
+.order-2{
+  order: 2
+}
+
+.order-3{
+	order: 3
+}
+
+@media screen and (max-width: 768px){
+	.order-0{
+   		order: 3
+	}
+	.order-1{
+  		order: 3
+	}
+	.order-2{
+  		order: 2
+	}
+	.order-3{
+		order: 3
+	}
+}
+
+.cenblock, .box, .landing{
+	margin-right: var(--auto);
+	margin-left: var(--auto);
+}
+
+.cenblock{
+	display: block;
+}
+
+.box{
+	max-width: 1280px;
+  width: var(--full)
+}
+
+.landing{
+  max-width: 800px;
+}
+
+/*hidden show*/
+.hidden-toggle,.hidden-remove,
+.hidden-spoiler,.hidden-search,
+.hidden-bars{
+  display: none;
+}
+.show-menu,.show-cover,.show-form{
+  display: block;
+}
+
+@media screen and (max-width: 992px){
+  .show-menu,.show-cover,.show-form{
+    display: none;
+  }
+
+  .hidden-toggle,.hidden-remove,.hidden-search,.hidden-bars{
+    display: block;
+  }
+}
